@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(14,23,35,1) 53%, rgba(0,0,0,1) 100%);
+    font-family: 'Quicksand', sans-serif;
+}
+.loader{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:100px;
+    height:100px;
+}
+.loader hr{border:0;
+    margin:0;
+    width:40%;
+    height:40%;
+    position:absolute;
+    border-radius:50%;
+    animation:spin 2s ease infinite
+}
+/* ----------------------------Nav--------------------------------------*/
+.header{
+    
+    background-color: #fefefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 5px 10%;
+    width: 100%;   
+    z-index: 100;
+}
+.menu-fixed{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+ 
+}
+.header .logo img{
+    height: 68px;
+    width: auto;
+    transition: all 0.3s;
+}
+.header .logo img:hover{
+    height: 68px;
+    width: auto;
+    transform: scale(1,1.1);
+}
+.header .nav .list {
+    list-style: none;
+    
+}
+.header .nav .list li {
+    display: inline-block;
+    padding: 0 15px;
+}
+.header .nav .list a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+}
+.header .nav .list a:hover{
+    color: rgb(154, 154, 154);
+}
+.login{
+    width: 80px;
+    height: 35px;
+    border: none;
+    background-color: #000;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+}
+/* ----------------------------End-Nav--------------------------------------*/
+.swiper-slide img{
+    width: 100%;
+    height: 550px;
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+    background: rgb(80, 189, 248);
+}
+
+
+/*-----------------------------Categorias------------------------------------*/
+.categories{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    background-color: azure;
+    border-radius: 15px;
+
+}
+.categories h2{
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid rgba(226, 221, 221, 0.872);
+}
+.container-categories{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.container-categories img{
+    width: 200px;
+    height: 210px;
+    padding: 20px;
+}
+.categories-details{
+    opacity: 0.8;
+    background-color: #ffffff;
+    box-shadow: 10px 5px 5px rgb(209, 209, 209);
+    margin-top: 30px;
+    margin-left: 30px;
+    transition: 1s;
+    padding-bottom: 20px;
+}
+.categories-details:hover {
+    background-color: #d6d6d6;
+    transform: scale(1.15);
+}
+.categories-details h3{
+    background-color: rgb(1, 1, 1);
+    color: white;
+    padding: 15px;
+}
+/*Nosotros fonazo*/
+.name{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.name h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+}
+.name h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: -10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.name h3{
+    text-align: left;
+    padding: 10px;
+    color: #7a7a7a;
+}
+.name img{
+    width: 750px;
+    height: 550px;
+}
+
+/* ----------------------------Card--------------------------------------*/
+.container_card{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+    align-content: stretch;
+    margin-top: 20px;
+}
+.card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-top: 60px;
+}
+.card:hover{
+    height: 450px;
+}
+.imgproduct{
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translate(-50%);
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgb(0, 0, 0, 0.20);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.imgproduct img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover .imgproduct{
+    width: 250px;
+    height: 250px;
+}
+.card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.card .content .details{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5;
+    transform: translateY(150px);
+}
+.card:hover .content .details{
+    transform: translateY(0px);
+}
+.card .content .details h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+.card .content .details h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+.card .content .details .colors{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 20px 0;
+   
+}
+.card .content .details .colors div{
+    width: 20px;
+    margin-left: 10px;
+    border-radius: 100px;
+}
+.card .content .details .colors .negro{
+    background-color: #000;
+}
+.card .content .details .colors .gris{
+    background-color: rgb(158, 158, 158);
+    color: rgb(158, 158, 158);
+}
+.card .content .details .colors .rojo{
+    background-color: rgb(255, 49, 49);
+    color: rgb(255, 49, 49);
+}
+.card .content .details .colors .azul{
+    background-color: rgb(50, 132, 255);
+    color: rgb(50, 132, 255);
+}
+.card .content .details .price{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(14,23,35,1) 53%, rgba(0,0,0,1) 100%);
+}
+.card .content .details .price h2{
+    color: white;
+}
+
+/* ----------------------------end-Card--------------------------------------*/
+/*-----------------------------Contact--------------------------------------*/
+.content-contact{
+    border-radius: 20px;
+    background-color: white;
+    margin: 20px;
+}
+ul{
+    list-style: none;
+}
+.contact-wrapper {
+    padding: 25px;
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #ffffff;
+    
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .bloque {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 80%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid gray;
+}
+
+.contact-form form button {
+    background: #000000;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    color: white;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #2f2f2f;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+    cursor: pointer;
+}
+
+.contact-info {
+    background: #fff;
+    border-left: 1px solid rgb(177, 177, 177);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+.contact-info h4{
+    text-align: center;
+}
+.contact-info a{
+    padding: 5px 5px 10px 10px;
+}
+
+@media(min-width: 700px) {
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+/*-----------------------------end Contact--------------------------------------*/
+/* ----------------------------footer--------------------------------------*/
+footer{
+    width: 100%;
+    padding: 10px ;
+    background-color: #ffffff;
+}
+.container_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.box_footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.box_footer img{
+    padding-top: 25px;
+    margin-left: 40px;
+    width: 100px;
+}
+.box_footer h2{
+    margin-bottom: 15px;
+    color: #343434;
+    font-weight: 700;
+}
+.box_footer a{
+    margin-top: 10px;
+    color: #484747;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+}
+.box_footer a:hover{
+    color: #7a7a7a;
+}
+.box_copy{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px;
+    text-align: center;
+}
+.box_copy p{
+    margin-top: 20;
+    color: #7a7a7a;
+}
+.box_copy hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+/* ----------------------------End-footer--------------------------------------*/
+/*--------------------login----------------------------*/
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/imglogin/login.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+.form-login{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    opacity: 0.7;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    padding: 25px;
+    border-radius: 0 20px 0 20px;
+    box-shadow: 0 15px 50px rgb(0, 0, 0, 0.20);
+
+}
+.form-login h1{
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    padding-bottom: 10px;
+}
+.form-login label{
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+}
+.form-login input{
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+
+}
+.form-login button{
+    margin-top: 15px;
+    width: 80px;
+    height: 35px;
+    background: #000000;
+    color: #fff;
+    border: none;
+    font-family: 'Quicksand';
+    cursor: pointer;
+}
