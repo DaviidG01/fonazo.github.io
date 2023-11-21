@@ -164,128 +164,12 @@ body{
     text-align: left;
     padding: 10px;
     color: #7a7a7a;
+    padding-left: 35px;
 }
 .name img{
     width: 750px;
     height: 550px;
 }
-
-/* ----------------------------Card--------------------------------------*/
-.container_card{
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    flex-wrap: wrap;
-    align-content: stretch;
-    margin-top: 20px;
-}
-.card {
-    position: relative;
-    width: 350px;
-    height: 190px;
-    background: #fff;
-    border-radius: 20px;
-    transition: 0.5s;
-    margin-top: 60px;
-}
-.card:hover{
-    height: 450px;
-}
-.imgproduct{
-    position: absolute;
-    left: 50%;
-    top: -50px;
-    transform: translate(-50%);
-    width: 150px;
-    height: 150px;
-    background: #000;
-    border-radius: 15px;
-    box-shadow: 0 15px 50px rgb(0, 0, 0, 0.20);
-    overflow: hidden;
-    transition: 0.5s;
-}
-.imgproduct img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card:hover .imgproduct{
-    width: 250px;
-    height: 250px;
-}
-.card .content{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    overflow: hidden;
-}
-.card .content .details{
-    padding: 40px;
-    text-align: center;
-    width: 100%;
-    transition: 0.5;
-    transform: translateY(150px);
-}
-.card:hover .content .details{
-    transform: translateY(0px);
-}
-.card .content .details h2{
-    font-size: 1.25em;
-    font-weight: 600;
-    color: #555;
-    line-height: 1.2em;
-}
-.card .content .details h2 span{
-    font-size: 0.75em;
-    font-weight: 500;
-    opacity: 0.5;
-}
-.card .content .details .colors{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin: 20px 0;
-   
-}
-.card .content .details .colors div{
-    width: 20px;
-    margin-left: 10px;
-    border-radius: 100px;
-}
-.card .content .details .colors .negro{
-    background-color: #000;
-}
-.card .content .details .colors .gris{
-    background-color: rgb(158, 158, 158);
-    color: rgb(158, 158, 158);
-}
-.card .content .details .colors .rojo{
-    background-color: rgb(255, 49, 49);
-    color: rgb(255, 49, 49);
-}
-.card .content .details .colors .azul{
-    background-color: rgb(50, 132, 255);
-    color: rgb(50, 132, 255);
-}
-.card .content .details .price{
-    padding: 10px 30px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1em;
-    font-weight: 500;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(14,23,35,1) 53%, rgba(0,0,0,1) 100%);
-}
-.card .content .details .price h2{
-    color: white;
-}
-
-/* ----------------------------end-Card--------------------------------------*/
 /*-----------------------------Contact--------------------------------------*/
 .content-contact{
     border-radius: 20px;
@@ -385,6 +269,12 @@ ul{
         text-align: left;
     }
 }
+#pagcontact{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
 /*-----------------------------end Contact--------------------------------------*/
 /* ----------------------------footer--------------------------------------*/
 footer{
@@ -489,3 +379,4 @@ footer{
     font-family: 'Quicksand';
     cursor: pointer;
 }
+
