@@ -1,27 +1,3 @@
-/*window.onload = () => {
-    let load = document.getElementById('loader')
-    setTimeout(() =>{ load.style.display = 'none'}, 4000)
-
-}*/
-/*var loading;
-
-function load(){
-
-    loading = setTimeout(showPage, 2000)
-}
-
-function showPage(){
-    document.getElementById("loader").style.display="none";
-}
-var counter = 1;
-setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    counter++;
-    if(counter>4){
-        counter = 1;
-    }
-}, 5000);*/
-
 const sr = ScrollReveal({
     origin:"top",
     distance:"60px",
